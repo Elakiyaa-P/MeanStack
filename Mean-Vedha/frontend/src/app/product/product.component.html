@@ -1,0 +1,26 @@
+<h2>Student</h2>
+<div>
+    <table>
+        <th>Product Name</th>
+        <th>Product Desc</th>
+        <th>Product price</th>
+        <th>Manufacture date</th>
+        <th>Expiry date</th>
+        <th>Barcode</th>
+        <tr *ngFor='let item of (response|async)'>
+            <td>{{item.prodName}}</td>
+            <td>{{item.prodDesc}}</td>
+            <td>{{item.prodPrice}}</td>
+            <td>{{item.manuDate}}</td>
+            <td>{{item.expDate}}</td>
+            <td>{{item.barCode}}</td>
+        </tr>
+    </table>
+</div>
+<button type="submit" (click)=getData()>Get</button>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=postData()>Post</button>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=putData()>Put</button>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="submit" (click)=deleteData()>Delete</button>

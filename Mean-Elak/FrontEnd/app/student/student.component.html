@@ -1,0 +1,31 @@
+<h3>HTTP Verbs</h3><br>
+
+<button (click)="onGet()">Get</button>&nbsp;&nbsp;&nbsp;
+<button (click)="onPost()">Post</button>&nbsp;&nbsp;&nbsp;
+<button (click)="onPut()">Put</button>&nbsp;&nbsp;&nbsp;
+<button (click)="onDelete()">Delete</button><br><br>
+
+
+<h3 align="center"> List of Student Details </h3>
+
+<table border="2" align="center">
+    <thead>
+        <th> Student ID </th>
+        <th> Student Name </th>
+        <th> Grade </th>
+        <th> Couse </th>
+        <th> Address </th>
+        <th> Phone </th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let stud of (response|async)">
+            <td>{{stud.stud_id}}</td>
+            <td>{{stud.stud_name}}</td>
+            <td>{{stud.grade}}</td>
+            <td>{{stud.course}}</td>
+            <td>{{stud.address}}</td>
+            <td>{{stud.phone}}</td>
+        </tr>
+    </tbody>
+</table>
